@@ -1,7 +1,12 @@
 import "./App.css";
+import Boids from "./components/Boids";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <>
+      <Boids />
+    </>
+  );
 }
 
 export default App;
