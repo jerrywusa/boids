@@ -1,34 +1,20 @@
-* {
-  overflow: hidden;
-}
-
 img {
-  user-drag: none;
   -webkit-user-drag: none;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  height: 100px;
-  width: 100px;
-  transition: transform 300ms linear all;
-  transition: all 300ms ease;
 }
 
 .boid {
-  animation: infiniteRotation 200ms step-start infinite;
+  /* animation: infiniteRotation 200ms step-start infinite; */
 }
 
-.boid-rotate {
-  transform: rotate(200deg);
-  transition: all 300ms ease-in-out;
-}
-
-.boid:hover {
+/* .boid:hover {
   box-sizing: border-box;
   border: red 3px solid;
   animation: infiniteRotation 1s linear infinite;
-}
+} */
 
 @keyframes infiniteRotation {
   0% {

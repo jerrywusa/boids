@@ -1,12 +1,10 @@
 import "./App.css";
 import Boids from "./components/Boids";
 
-function App() {
+export default function App() {
   return (
     <>
       <Boids />
     </>
   );
 }
-
-export default App;

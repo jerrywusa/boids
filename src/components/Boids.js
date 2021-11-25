@@ -1,13 +1,14 @@
 import "./Boids.css";
 import Boid from "./Boid";
+import range from "lodash.range";
 
-function Boids(props) {
-  const numberOfBoids = 112;
-  const boidsList = Array.from(Array(numberOfBoids).keys()).map((i) => (
-    <Boid />
-  ));
-
-  return <>{boidsList}</>;
+export default function Boids(props) {
+  const numberOfBoids = 1;
+  return (
+    <>
+      {range(numberOfBoids).map((d) => (
+        <Boid />
+      ))}
+    </>
+  );
 }
-
-export default Boids;
