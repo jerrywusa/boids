@@ -8,11 +8,13 @@ img {
 
 .boid {
   /* animation: infiniteRotation 200ms step-start infinite; */
+  border: solid red 1px;
+  position: absolute;
 }
 
 /* .boid:hover {
   box-sizing: border-box;
-  border: red 3px solid;
+  border: red 10px solid;
   animation: infiniteRotation 1s linear infinite;
 } */
 

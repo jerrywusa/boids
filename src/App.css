@@ -1,6 +1,5 @@
 body {
   height: 100vh;
   min-width: 100vh;
-  border: solid red 1px;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
