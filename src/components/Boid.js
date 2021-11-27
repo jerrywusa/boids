@@ -1,6 +1,6 @@
 import "./Boid.css";
 import React from "react";
-import boidArrowhead from "../images/boidArrowhead.png";
+import boidArrowhead from "../images/blackArrowhead.png";
 import { NodeGroup } from "react-move";
 import range from "lodash.range";
 import { uid } from "uid";
@@ -9,8 +9,8 @@ class Boid extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      x: Math.random() * 1300,
-      y: Math.random() * 700,
+      x: Math.random() * 5300,
+      y: Math.random() * 2700,
       deg: Math.random() * 360,
     };
     this.handleMouseMove = this.handleMouseMove.bind(this);
@@ -38,6 +38,25 @@ class Boid extends React.Component {
       finalDeg = 90 - deg;
     }
     this.setState({ deg: finalDeg });
+
+    const rad = deg * (Math.PI / 180);
+    let newX = this.state.x;
+    let newY = this.state.y;
+    const speed = 30;
+    if (changeX >= 0 && changeY >= 0) {
+      newX += Math.cos(rad) * speed;
+      newY += Math.sin(rad) * speed;
+    } else if (changeX < 0 && changeY >= 0) {
+      newX -= Math.cos(rad) * speed;
+      newY += Math.sin(rad) * speed;
+    } else if (changeX < 0 && changeY < 0) {
+      newX -= Math.cos(rad) * speed;
+      newY -= Math.sin(rad) * speed;
+    } else if (changeX >= 0 && changeY < 0) {
+      newX += Math.cos(rad) * speed;
+      newY -= Math.sin(rad) * speed;
+    }
+    this.setState({ x: newX, y: newY });
   }
 
   render() {

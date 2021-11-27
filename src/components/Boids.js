@@ -4,7 +4,7 @@ import range from "lodash.range";
 import { uid } from "uid";
 
 export default function Boids(props) {
-  const numberOfBoids = 1;
+  const numberOfBoids = 50;
   return (
     <>
       {range(numberOfBoids).map((d) => (

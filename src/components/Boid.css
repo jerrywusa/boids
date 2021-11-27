@@ -8,7 +8,7 @@ img {
 
 .boid {
   /* animation: infiniteRotation 200ms step-start infinite; */
-  border: solid red 1px;
+  /* border: solid red 1px; */
   position: absolute;
 }
 
